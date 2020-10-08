@@ -8,8 +8,7 @@ public class HP : MonoBehaviour
 {
     [SerializeField] private Text HP_Text;
     [SerializeField] private Image HP_bar;
-    private float hp = 100;
-
+    
     private void Start()
     {
         HP_bar = GameObject.Find("HP_bar").GetComponent<Image>();
@@ -18,7 +17,7 @@ public class HP : MonoBehaviour
 
     private void Update()
     {
-        HP_Text.text = "HP : " + hp;
-        HP_bar.fillAmount = hp / 100f;
+        HP_Text.text = "HP : " + Player.instance.hp;
+        HP_bar.fillAmount = Player.instance.hp / 100f;
     }
 }

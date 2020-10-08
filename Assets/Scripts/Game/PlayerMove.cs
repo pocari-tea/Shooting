@@ -1,36 +1,38 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerMove : Player
 {
-    private float walk_Speed;
-    private float sprint_Speed;
+    private Rigidbody2D rb;
+    private Movestick mstick;
 
     private void Start()
     {
-        walk_Speed = 5f;
-        sprint_Speed = 10f;
+        rb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
+        mstick = GameObject.Find("MoveBack").GetComponent<Movestick>();
+        
+        instance.speed = walk_Speed;
+        instance.staminer = maxStaminer;
     }
 
-    void Update()
+    public void MovePlayer(Vector2 direction)
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-
-        Vector3 dir = new Vector3(h, v, 0);
-        //transform.position = transform.position + dir * speed * Time.deltaTime; ==
-
-        if (Input.GetKey(KeyCode.LeftShift))
+         // 달리기를 누르지 않으면 스태미너 회복
+        if (instance.staminer <= 100)
         {
-            walk_Speed = sprint_Speed;
-        }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            walk_Speed = 5f;
+            instance.staminer += 0.2f;
         }
 
-        transform.position += dir * walk_Speed * Time.deltaTime;
+        if (!instance.sprint || instance.staminer <= 0)
+        {
+            instance.speed = walk_Speed;
+        }
+        
+        Vector2 dir = new Vector2(direction.normalized.x * instance.speed, direction.normalized.y * instance.speed);
+
+        rb.velocity = mstick.state ? dir : Vector2.zero;
     }
 }

@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Enemy
   - Bullet
+  - Wall
+  - Gun
+  - knife
+  - Attackstick
+  - Movestick
   layers:
   - Default
   - TransparentFX
