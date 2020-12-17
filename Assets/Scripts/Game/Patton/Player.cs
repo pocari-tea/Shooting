@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviourPunCallbacks, IPunObservable
 {
     public static Player instance;
     
@@ -21,8 +22,15 @@ public class Player : MonoBehaviour
     public bool sprint;
     public bool attack;
 
+    public PhotonView PV;
+
     private void Awake()
     {
         instance = this;
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        throw new NotImplementedException();
     }
 }

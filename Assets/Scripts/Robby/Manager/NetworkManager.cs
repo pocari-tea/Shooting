@@ -9,7 +9,6 @@ using UnityEngine.UI;
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
     [SerializeField] private InputField NickNameInput;
-    [SerializeField] private GameObject ConnectPanel;
 
     private void Awake()
     {
@@ -29,5 +28,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         LoadingManager.LoadScene("Game");
+    }
+
+    public override void OnDisconnected(DisconnectCause cause)
+    {
+        
     }
 }

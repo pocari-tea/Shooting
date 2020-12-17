@@ -8,7 +8,7 @@ public class Attack_Manager : MonoBehaviour
 
     private void Start()
     {
-        PA = GameObject.Find("Glock17").GetComponent<PlayerAttack>();
+        //PA = GameObject.Find("Glock17").GetComponent<PlayerAttack>();
     }
     
     private void FixedUpdate()

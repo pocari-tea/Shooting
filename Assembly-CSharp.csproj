@@ -77,6 +77,7 @@
      <Compile Include="Assets\Scripts\Game\Manager\Aim_Manager.cs" />
      <Compile Include="Assets\Scripts\Game\Manager\Attack_Manager.cs" />
      <Compile Include="Assets\Scripts\Game\Manager\Enemy_Manager.cs" />
+     <Compile Include="Assets\Scripts\Game\Manager\GameManager.cs" />
      <Compile Include="Assets\Scripts\Game\Manager\Move_Manager.cs" />
      <Compile Include="Assets\Scripts\Game\Manager\Sprint_Manager.cs" />
      <Compile Include="Assets\Scripts\Game\Manager\Weapon_Manager.cs" />
@@ -96,7 +97,6 @@
      <Compile Include="Assets\Scripts\Game\UI\Staminer.cs" />
      <Compile Include="Assets\Scripts\Game\WeaponReload.cs" />
      <Compile Include="Assets\Scripts\Loading\Manager\LoadingManager.cs" />
-     <Compile Include="Assets\Scripts\Loading\UI\ProgressBar.cs" />
      <Compile Include="Assets\Scripts\Robby\Manager\NetworkManager.cs" />
      <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
      <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
@@ -661,18 +661,6 @@
     <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
       <Project>{20993762-DDF6-54A5-420D-99FED77DD922}</Project>
       <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
-      <Project>{2B1E6D7E-6B62-7E11-DC86-5668AE2CB550}</Project>
-      <Name>PunDemos.DemoHubEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{40131FE5-EB30-0EAB-339A-384DCA67EA06}</Project>
-      <Name>PunDemos.DemoSlotcarEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{FB636082-6ED9-9C8C-C0E7-05B6BE9964C2}</Project>
-      <Name>PhotonUnityNetworking.Demos</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
       <Project>{BA471C55-309B-BCC9-4932-A8F040CEE7FE}</Project>

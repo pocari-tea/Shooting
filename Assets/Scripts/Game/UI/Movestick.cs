@@ -50,7 +50,8 @@ public class Movestick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
         Vector2 offset = pointB - pointA;
         direction = Vector2.ClampMagnitude(offset, radius);
         joystick.transform.position = new Vector2(pointA.x + direction.x, pointA.y + direction.y);
-        sprint.transform.position = new Vector2(pointA.x + direction.normalized.x * radius, pointA.y + direction.normalized.y * radius);
+        sprint.transform.position = new Vector2(pointA.x + direction.normalized.x * radius,
+            pointA.y + direction.normalized.y * radius);
     }
     
     public void OnPointerUp(PointerEventData eventData)

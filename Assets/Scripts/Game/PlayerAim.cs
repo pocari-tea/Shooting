@@ -6,12 +6,12 @@ using UnityEngine;
 public class PlayerAim : MonoBehaviour
 {
     private Rigidbody2D rb;
-    // private Aimstick astick;
+    private Aimstick astick;
 
     private void Start()
     {
         rb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
-        // astick = GameObject.Find("AimBack").GetComponent<Aimstick>();
+        astick = GameObject.Find("AimBack").GetComponent<Aimstick>();
     }
 
     public void aimPlayer(Vector2 offset)
