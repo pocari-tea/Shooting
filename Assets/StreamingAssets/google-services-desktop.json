@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "793803363335",
+    "project_id": "unity-shooting-backend",
+    "storage_bucket": "unity-shooting-backend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793803363335:android:04a14e9eb1a331c22406a2",
+        "android_client_info": {
+          "package_name": "com.pocari_tea.firebasedemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "793803363335-2d81ho4ihm09eqc5ibjgaukj2e99pjqa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOoFnGAEcj-nkx7gsvy8l5rUHHJ0uLP3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "793803363335-2d81ho4ihm09eqc5ibjgaukj2e99pjqa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
