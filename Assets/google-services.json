@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "793803363335-shc2ins6eb8aooj9bgjs85sck238516s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pocari_tea.firebasedemo",
+            "certificate_hash": "92b39c8e08ba6f7f0acb5201c18f253bf921974a"
+          }
+        },
+        {
           "client_id": "793803363335-2d81ho4ihm09eqc5ibjgaukj2e99pjqa.apps.googleusercontent.com",
           "client_type": 3
         }
