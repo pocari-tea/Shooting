@@ -27,7 +27,7 @@ public class AuthManager : MonoBehaviour
         signInBtn.interactable = false;
 
         //firebase를 구동할 수 있는 환경인지 체크
-        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithb (task =>
+        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
         {
             var result = task.Result;
 
@@ -53,6 +53,36 @@ public class AuthManager : MonoBehaviour
 
     public void SignIn()
     {
+        if(!IsFirebaseReady || IsSignInOnProgress || User != null)
+        {
+            return;
+        }
 
+        IsSignInOnProgress = true;
+        signInBtn.interactable = false;
+
+        firebaseAuth.SignInWithEmailAndPasswordAsync(emailField.text, passwordField.text).ContinueWithOnMainThread(
+            (task) =>
+            {
+                Debug.Log($"Sign in status : {task.Status}");
+
+                IsSignInOnProgress = false;
+                signInBtn.interactable = true;
+
+                if (task.IsFaulted)
+                {
+                    Debug.LogError(task.Exception);
+                }
+                else if (task.IsCanceled)
+                {
+                    Debug.LogError($"Sign in canceled");
+                }
+                else
+                {
+                    User = task.Result;
+                    Debug.Log(User.Email);
+                    SceneManager.LoadScene("Lobby");
+                }
+            });
     }
 }
