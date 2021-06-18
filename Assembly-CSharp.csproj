@@ -103,6 +103,7 @@
     <Compile Include="Assets\Scripts\Game\UI\Staminer.cs" />
     <Compile Include="Assets\Scripts\Game\WeaponReload.cs" />
     <Compile Include="Assets\Scripts\Loading\Manager\LoadingManager.cs" />
+    <Compile Include="Assets\Scripts\Lobby\LobbyManager.cs" />
     <Compile Include="Assets\Scripts\SignIn\Manager\AuthManager.cs" />
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
     <None Include="Assets\Photon\PhotonLibs\changes-library.txt" />
